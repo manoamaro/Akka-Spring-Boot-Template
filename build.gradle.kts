@@ -18,6 +18,7 @@ repositories {
 
 val akkaVersion = "2.6.19"
 val scalaBinary = "2.13"
+val akkaPlatform = "0.2.7"
 
 
 dependencies {
@@ -35,7 +36,7 @@ dependencies {
 
 
     implementation(platform("com.typesafe.akka:akka-bom_${scalaBinary}:${akkaVersion}"))
-    implementation(platform("com.lightbend.akka:akka-platform-dependencies_${scalaBinary}:0.2.7"))
+    implementation(platform("com.lightbend.akka:akka-platform-dependencies_${scalaBinary}:${akkaPlatform}"))
     implementation("com.typesafe.akka:akka-actor-typed_${scalaBinary}")
     implementation("com.typesafe.akka:akka-persistence-typed_${scalaBinary}")
     implementation("com.typesafe.akka:akka-persistence-query_${scalaBinary}")
