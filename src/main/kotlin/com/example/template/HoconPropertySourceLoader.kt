@@ -10,7 +10,7 @@ class HoconPropertySourceLoader: PropertySourceLoader {
     override fun getFileExtensions(): Array<String> = arrayOf("conf")
 
     override fun load(name: String, resource: Resource): List<PropertySource<*>> {
-        val config = ConfigFactory.parseURL(resource.url)
+        val config = ConfigFactory.parseURL(resource.url).resolve()
 
         val result = buildFlattenedMap(config.root().unwrapped(), null)
 
